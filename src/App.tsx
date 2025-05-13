@@ -1,13 +1,12 @@
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from './app/hooks';
-import { logout } from './features/auth/authSlice';
+import { useAppSelector } from './app/hooks';
 import LoginPage from './features/auth/components/LoginForm';
 
 
 function App() {
   const { user } = useAppSelector((state) => state.auth);
-  const dispatch = useAppDispatch();
+  //const dispatch = useAppDispatch();
 
   // useEffect(() => {
   //   // Проверка авторизации при монтировании
@@ -29,7 +28,7 @@ function App() {
         
         {/* Дефолтный маршрут */}
         <Route path="/" element={
-          <Navigate to={user ? '/profile' : '/login'} replace />
+          <Navigate to={user ? '/profile' : '/'} replace />
         } />
       </Routes>
     </div>

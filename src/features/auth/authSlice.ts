@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AppThunk } from '../../app/store';
-import { checkAuthAPI, loginAPI, registerAPI, logoutAPI } from './api/authAPI';
+import { checkAuthAPI, loginAPI, logoutAPI } from './api/authAPI';
 import axios from 'axios';
 
 interface AuthState {
